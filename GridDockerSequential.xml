@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="CrossBrowserSuite">
+    <test name="SqTest">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="os" value="linux"/>
+        <classes>
+            <class name="org.example.testCases.GridDemo"/>
+        </classes>
+    </test>
+</suite>

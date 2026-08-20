@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="MasterSuite" >
+    <groups>
+        <run>
+            <include name="datadriven"/>
+        </run>
+    </groups>
+    <test name="MasterTest">
+        <classes>
+            <class name="org.example.testCases.TC002_Login"/>
+            <class name="org.example.testCases.TC001_AccountRegistration"/>
+        </classes>
+    </test>
+</suite>
