@@ -8,6 +8,7 @@
     <test name="MasterTest">
         <classes>
             <class name="org.example.testCases.TC001_AccountRegistration"/>
+            <class name="org.example.testCases.TC_003LoginTest"/>
 
         </classes>
     </test>

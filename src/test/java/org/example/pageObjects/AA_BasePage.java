@@ -5,6 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class AA_BasePage {
@@ -13,14 +14,15 @@ public class AA_BasePage {
 
     static {
         try {
-            FileReader fileReader = new FileReader("./src/test/Resources/config.properties");
+            InputStream input=AA_BasePage.class.getClassLoader().getResourceAsStream("config.properties"); //returns null if file is not found
             p = new Properties();
-            p.load(fileReader);
-        } catch (IOException e) {
+            p.load(input);//throws NPE if file is not found
+        } catch (Exception e) {
             throw new RuntimeException("Failed to load config.properties: " + e.getMessage(), e);
         }
     }
 
+    //using pageFactory
     public AA_BasePage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
