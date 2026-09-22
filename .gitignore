@@ -39,3 +39,4 @@ build/
 logs/
 test-output/
 .idea/
+~$*.xlsx

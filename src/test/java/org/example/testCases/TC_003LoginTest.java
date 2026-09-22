@@ -2,6 +2,7 @@ package org.example.testCases;
 
 import org.example.pageObjects.Login1Page;
 import org.example.testBase.BaseTest;
+import org.example.utils.DataProviderUtils;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -9,13 +10,13 @@ import org.testng.annotations.Test;
 public class TC_003LoginTest extends BaseTest {
 
     //checking with invalid creds
-    @Test(dataProvider = "invalid_creds")
+    @Test(dataProvider = "invalid_creds", dataProviderClass = DataProviderUtils.class)
     public void invalid_LoginisRejected(String username,String pwd) {
         Login1Page login1Page = new Login1Page(driver);
         login1Page.login(username, pwd);
         Assert.assertFalse(login1Page.isLoginSuccessful(), "Login succeeded unexpectedly with invalid credentials" + username);
     }
-        @DataProvider(name="invalid_creds")
+        /*@DataProvider(name="invalid_creds")
                 public Object[][] invalid_loginData(){
                  Object[][] invalid_Data={
                          {"test56@gmail.com", "abc"},
@@ -23,11 +24,11 @@ public class TC_003LoginTest extends BaseTest {
                          {"pom@gmail.com", "89uio"}
                  };
            return invalid_Data;
-        }
+        }*/
 
 
         //checking with valid creds
-       @Test(dataProvider = "valid_creds")
+       @Test(dataProvider = "valid_creds", dataProviderClass = DataProviderUtils.class)
        public void valid_login_logout(String username, String pwd){
         Login1Page login1Page=new Login1Page(driver);
         login1Page.login(username,pwd);
@@ -35,7 +36,7 @@ public class TC_003LoginTest extends BaseTest {
         login1Page.logout();
        }
 
-       @DataProvider(name="valid_creds")
+       /*@DataProvider(name="valid_creds")
        public Object[][] valid_loginData(){
 
         Object[][] valid_data={
@@ -43,7 +44,7 @@ public class TC_003LoginTest extends BaseTest {
                 {"abc123@gmail.com", "test@123"}
         };
         return valid_data;
-    }
+    }*/
 
 
     }
