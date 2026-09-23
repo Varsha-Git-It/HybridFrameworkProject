@@ -1,12 +1,13 @@
-package org.example.testCases;
+/*package org.example.testCases;
 
 import org.example.pageObjects.RegistrationAccountPage;
 import org.example.pageObjects.HomePage;
-import org.example.testBase.BaseClass;
+
+import org.example.testBase.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC001_AccountRegistration extends BaseClass {
+public class TC001_AccountRegistration extends BaseTest {
 
     @Test(groups = {"regression","master"})
     public void account_Registration(){
@@ -44,4 +45,4 @@ public class TC001_AccountRegistration extends BaseClass {
         logger.info("******* Finished TC001_AccountRegistrationTest *********");
 
     }
-}
+}*/

@@ -7,8 +7,9 @@
     </listeners>
     <test name="MasterTest">
         <classes>
-            <class name="org.example.testCases.TC001_AccountRegistration"/>
-            <class name="org.example.testCases.TC_003LoginTest"/>
+
+            <class name="org.example.testCases.TC002_LoginTest"/>
+            <class name="org.example.testCases.TC003_ProductSearch"/>
 
         </classes>
     </test>

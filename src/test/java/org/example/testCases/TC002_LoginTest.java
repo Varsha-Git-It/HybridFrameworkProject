@@ -4,10 +4,9 @@ import org.example.pageObjects.Login1Page;
 import org.example.testBase.BaseTest;
 import org.example.utils.DataProviderUtils;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class TC_003LoginTest extends BaseTest {
+public class TC002_LoginTest extends BaseTest {
 
     //checking with invalid creds
     @Test(dataProvider = "invalid_creds", dataProviderClass = DataProviderUtils.class)
