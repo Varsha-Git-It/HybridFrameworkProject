@@ -1,7 +1,5 @@
 package org.example.testCases;
 
-import org.example.pageObjects.HomePage;
-import org.example.pageObjects.RegistrationAccountPage;
 import org.example.testBase.GridBaseClass;
 import org.testng.Assert;
 import org.testng.annotations.Test;
