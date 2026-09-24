@@ -22,7 +22,8 @@ public class AA_BasePage {
         }
     }
 
-    //using pageFactory
+
+    //constructor
     public AA_BasePage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);

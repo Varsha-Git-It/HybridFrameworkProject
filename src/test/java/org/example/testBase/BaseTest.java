@@ -1,5 +1,6 @@
 package org.example.testBase;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.example.pageObjects.AA_BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -26,20 +27,27 @@ public class BaseTest {
         driver=new ChromeDriver(options);
         driver.manage().window().maximize();
     }
-
     @BeforeMethod
     public void resetSession(){
         driver.manage().deleteAllCookies();
         driver.get(AA_BasePage.p.getProperty("appUrl"));
     }
-
     @AfterClass
     public void tearDown(){
         if(driver!=null){
             driver.quit();
         }
     }
-
-
-
+    public String randomString(){
+        String generated_randomString= RandomStringUtils.insecure().nextAlphabetic(5);
+        return generated_randomString;
+    }
+    public String randomNumber(){
+        String generated_randomNumber=RandomStringUtils.insecure().nextNumeric(10);
+        return generated_randomNumber;
+    }
+    public String randomAlphanumeric(){
+        String generated_randomAlphaNumber=RandomStringUtils.insecure().nextAlphanumeric(6);
+        return generated_randomAlphaNumber;
+    }
 }
