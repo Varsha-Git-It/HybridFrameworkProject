@@ -55,7 +55,7 @@ public class TC004_RegistrationValidationTest extends BaseTest {
         accountRegistrationPage.click_subscribe_no_btn();
         accountRegistrationPage.click_privacy_checkbox();
         accountRegistrationPage.click_registration_continue_btn();
-        
+
         boolean wellFormed = email.matches("^[\\w.+-]+@[\\w-]+\\.[a-zA-Z]{2,}$");
 
         if (wellFormed) {
