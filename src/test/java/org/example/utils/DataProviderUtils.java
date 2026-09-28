@@ -38,4 +38,20 @@ public class DataProviderUtils {
         excel.close();
         return matchedRows.toArray(new Object[0][]);
     }
+
+    @DataProvider(name="emailFormatData")
+    public Object[][] emailFormatData() throws IOException{
+        String path="./testData/EmailData.xlsx";
+        ExcelUtils excelUtils=new ExcelUtils(path,"EmailValidation");
+        int rowCount = excelUtils.getRowCount();
+        Object[][] data=new Object[rowCount-1][1];
+        for(int i=1;i<rowCount;i++){
+            data[i-1][0]=excelUtils.getCellData(i,0).trim();
+        }
+        excelUtils.close();
+        return data;
+
+    }
+
+
 }

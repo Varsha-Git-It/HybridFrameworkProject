@@ -1,4 +1,4 @@
-package org.example.testCases;
+/*package org.example.testCases;
 
 import org.example.testBase.GridBaseClass;
 import org.testng.Assert;
@@ -40,4 +40,4 @@ public class GridDemo extends GridBaseClass {
         logger.info("******* Finished GridDemo Test *********");
 
     }
-}
+}*/

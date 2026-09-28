@@ -1,4 +1,4 @@
-package org.example.testBase;
+/*package org.example.testBase;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.logging.log4j.LogManager;
@@ -114,5 +114,5 @@ public class GridBaseClass {
             return generatedstring;
         }
     }
-
+*/
 

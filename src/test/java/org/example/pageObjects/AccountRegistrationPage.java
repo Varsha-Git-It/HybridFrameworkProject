@@ -1,5 +1,6 @@
 package org.example.pageObjects;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -45,6 +46,12 @@ public class AccountRegistrationPage extends AA_BasePage{
     WebElement confirm_heading;
     @FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
     WebElement privacyPolicy_alert;
+    @FindBy(xpath="//div[@class='text-danger']")
+    WebElement fname_required_alert;
+    @FindBy(xpath="//div[contains(text(),' does not appear to be valid')]")
+    WebElement email_required_alert;
+    @FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+    WebElement email_registered_warning;
 
     //action methods
     public void click_login_continue_btn(){
@@ -97,5 +104,42 @@ public class AccountRegistrationPage extends AA_BasePage{
             return false;
         }
     }
+
+    public boolean fname_alert_check(){
+        try{
+            wait.until(ExpectedConditions.visibilityOf(fname_required_alert));
+            return  fname_required_alert.isDisplayed();
+        }catch (TimeoutException e){
+            return false;
+        }
+    }
+
+    //DOM based alerts
+    public boolean email_alert_check(){
+        try{
+            wait.until(ExpectedConditions.visibilityOf(email_required_alert));
+            return  email_required_alert.isDisplayed();
+        }catch (TimeoutException e){
+            return false;
+        }
+    }
+
+    public boolean email_registered_alert_check(){
+        try{
+            wait.until(ExpectedConditions.visibilityOf(email_registered_warning));
+            return email_registered_warning.isDisplayed();
+        }catch (TimeoutException e){
+            return false;
+        }
+    }
+
+
+    //browser native alert
+    public String email_validation_message(){
+        String message=(String)((JavascriptExecutor)driver).executeScript("return arguments[0].validationMessage;",email);
+        return message;
+    }
+
+
 
 }

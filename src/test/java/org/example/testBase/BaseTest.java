@@ -1,6 +1,8 @@
 package org.example.testBase;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.example.pageObjects.AA_BasePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +14,9 @@ import org.testng.annotations.BeforeMethod;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class BaseTest {
+    protected Logger logger = LogManager.getLogger(this.getClass());
     protected WebDriver driver;//instance field-belongs to each individual object;every instance gets its own separate copy of this
 
     @BeforeClass
