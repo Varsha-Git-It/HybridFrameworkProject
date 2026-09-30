@@ -9,7 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 
-@Listeners(org.example.listeners.ExtentListener.class)
+
 public class TC004_RegistrationValidationTest extends BaseTest {
 
 

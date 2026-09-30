@@ -9,8 +9,8 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class AA_BasePage {
-    WebDriver driver;
-    public static Properties p;
+       protected WebDriver driver;
+        public static Properties p;
 
     static {
         try {

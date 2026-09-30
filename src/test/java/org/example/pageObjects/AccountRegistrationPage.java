@@ -50,7 +50,7 @@ public class AccountRegistrationPage extends AA_BasePage{
     WebElement fname_required_alert;
     @FindBy(xpath="//div[contains(text(),' does not appear to be valid')]")
     WebElement email_required_alert;
-    @FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+    @FindBy(xpath="//div[contains(text(),'Address is already registered')]")
     WebElement email_registered_warning;
 
     //action methods
