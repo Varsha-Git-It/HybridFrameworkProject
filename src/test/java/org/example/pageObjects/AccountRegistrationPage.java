@@ -1,9 +1,6 @@
 package org.example.pageObjects;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -136,6 +133,9 @@ public class AccountRegistrationPage extends AA_BasePage{
 
     //browser native alert
     public String email_validation_message(){
+        WebElement emailField = wait.until(
+                ExpectedConditions.presenceOfElementLocated(By.id("input-email"))
+        );
         String message=(String)((JavascriptExecutor)driver).executeScript("return arguments[0].validationMessage;",email);
         return message;
     }
