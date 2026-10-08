@@ -8,6 +8,7 @@
 
     <test name="ChromeTests">
         <parameter name="browser" value="chrome"/>
+        <parameter name="os" value="windows"/>
         <classes>
             <class name="org.example.testCases.TC001_AccountRegistrationTest"/>
             <class name="org.example.testCases.TC002_LoginTest"/>
@@ -18,6 +19,7 @@
 
     <test name="FirefoxTests">
         <parameter name="browser" value="firefox"/>
+        <parameter name="os" value="windows"/>
         <classes>
             <class name="org.example.testCases.TC001_AccountRegistrationTest"/>
             <class name="org.example.testCases.TC002_LoginTest"/>
@@ -28,6 +30,7 @@
 
     <test name="EdgeTests">
         <parameter name="browser" value="edge"/>
+        <parameter name="os" value="windows"/>
         <classes>
             <class name="org.example.testCases.TC001_AccountRegistrationTest"/>
             <class name="org.example.testCases.TC002_LoginTest"/>
