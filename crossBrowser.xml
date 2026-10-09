@@ -6,8 +6,8 @@
         <listener class-name="org.example.listeners.ExtentListener"/>
     </listeners>
 
-    <parameter name="browser" value="firefox"/>
-    <parameter name="os" value="windows"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="os" value="linux"/>
 
     <test name="ChromeTests">
         <classes>
